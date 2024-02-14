@@ -44,3 +44,19 @@ atoz = ['a'..'z']
 
 -- the first 24 multiples of 13
 -- thirteen = 24 [13,26..].
+
+-- cycle takes a list and cycles it into an infinite lis
+ans = take 10 (cycle num1)
+
+-- repeat takes an element and produces an infinite list of just that element. It's like cycling a list with only one element.
+ans1 = take 5 (repeat 5)
+
+-- list comprehension
+evenNo = [x*2 | x<- [1..10]]
+evengt12 = [x*2 | x<-[1..10] ,x*2>=10]
+
+boomBangs xs = [ if x < 10 then "BOOM!" else "BANG!" | x <- xs, odd x]
+
+-- Tuples similar to list Heterogenous
+righttriangle = [(a,b,c) | a<- [1..10], b<- [1..10], c<-[1..10],c^2 == a^2+b^2]
+
