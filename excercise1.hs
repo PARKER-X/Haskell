@@ -35,4 +35,6 @@ flatrev = [x|xs<-reverse arr,x<-reverse xs]
 arr1 = ['a','a','a','b','c','a','b','c','d','d','d','d','e']
 -- dup = [arr1 !! x | x<-[0..length arr1-2],arr1 !! x /= arr1 !! (x+1) ]
 
+-- dup [] = []
+-- dup (x:xs) = x : [ r | (l,r) <- zip (x:xs) xs , l /= r ]
 
